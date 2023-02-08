@@ -1,0 +1,149 @@
+:root {
+  --bg-color: #c85938;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  /* remove scroll bar and disable scroll */
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+}
+
+p {
+  color: white;
+  font-size: 14px;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  width: 100%;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  list-style: none;
+  justify-content: center;
+  margin: 0 1rem;
+}
+nav li {
+  display: block;
+}
+nav li a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+}
+nav ul li:nth-child(1) {
+  justify-self: start;
+  margin-right: 2rem;
+}
+
+/* HOME */
+
+main {
+  margin: 9rem 20% 40vh 20%;
+}
+
+.img-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.img-container img {
+  width: 5rem;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+
+/* SOCIAL SVG CONTAINER */
+.social-container {
+  position: absolute;
+  top: 15px;
+  right: -20px;
+  display: flex;
+  justify-content: end;
+  gap: 3px;
+}
+
+main hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgb(0, 0, 0);
+  width: 115%;
+  position: absolute;
+  right: -24px;
+  bottom: 8px;
+}
+
+.user-bio {
+  margin: 5rem 0;
+}
+
+.quote-container {
+  padding: 1rem;
+  background-color: #ffab93;
+  filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.25));
+}
+.quote-container p {
+  color: black;
+}
+
+/* MEDIA QUERIES */
+
+/* FOR TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    width: 40%;
+  }
+  main {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+/* FOR DESKTOP */
+@media screen and (min-width: 1025px) {
+  nav {
+    width: 40%;
+  }
+  main {
+    margin-top: 13%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
